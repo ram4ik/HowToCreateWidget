@@ -44,7 +44,26 @@ struct MyAppWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        //Text(entry.date, style: .time)
+        
+        ZStack {
+            HStack {
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Spacer()
+                    Image(systemName: "person.3.fill")
+                        .font(.system(size: 48))
+                        .foregroundColor(.white)
+                        .padding(.trailing, 10)
+                    
+                    Text("Featured\nPeople")
+                        .foregroundColor(.white)
+                        .padding(.trailing, 10)
+                        .multilineTextAlignment(.trailing)
+                    Spacer()
+                }
+            }
+        }.background(Color(.systemTeal))
     }
 }
 
